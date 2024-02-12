@@ -26,6 +26,7 @@ function Main() {
   const [rightHeight, setRightHeight] = useState<number>(100)
   const [fontSize, setFontSize] = useState<number>(15)
   const [openDialog, setOpenDialog] = useState<boolean>(false)
+  const [marginRight, setMarginRight] = useState<number>(10)
 
   const {enqueueSnackbar} = useSnackbar();
 
@@ -61,14 +62,15 @@ function Main() {
 
     enqueueSnackbar(
       errouMessages[randomIndex],
-      {variant: "error", hideIconVariant: true}
+      {variant: "error", hideIconVariant: true, preventDuplicate: true}
     )
 
     if(errorWidth > 125) setErrorWidth(errorWidth - 6)
     if(errorHeight > 20) setErrorHeight(errorHeight - 6)
+    if(marginRight > 0) setMarginRight(marginRight - 1)
     setFontSize(fontSize + 2)
-    setRightWidth(rightWidth + 10)
-    setRightHeight(rightHeight + 10)
+    setRightWidth(rightWidth + 20)
+    setRightHeight(rightHeight + 20)
     setLastMessageIndex(randomIndex)
   }
 
@@ -79,7 +81,7 @@ function Main() {
       <p>DAÍ BEM NÓS PRA TODO O SEMPRE DAÍ NÉ?</p>
       <div className='botoes'>
         <Button color="success" variant='contained'onClick={acertouClique}
-          sx={{width: rightWidth, height: rightHeight, position: 'absolute', fontSize: fontSize, marginRight: '10rem'}}>
+          sx={{width: rightWidth, height: rightHeight, position: 'absolute', fontSize: fontSize, marginRight: marginRight+'rem'}}>
           Sim meu amor
         </Button>
         <Button color="error" variant='contained' onClick={errouClique}

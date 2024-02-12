@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <SnackbarProvider maxSnack={100}>
+    <SnackbarProvider maxSnack={6}>
       <Main />
     </SnackbarProvider>
   </React.StrictMode>
