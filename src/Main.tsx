@@ -51,6 +51,7 @@ function Main() {
     setFontSize(15)
     setRightWidth(150)
     setRightHeight(100)
+    setMarginRight(10)
     setOpenDialog(true)
   }
 
