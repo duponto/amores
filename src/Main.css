@@ -7,15 +7,15 @@ div {
         font-size: xx-large;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
     }
-    > img {
-        border-radius: 50%;
-    }
-    > .botoes {
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-    }
+}
+.salsichas{
+    border-radius: 50%;
+}
+.botoes {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
