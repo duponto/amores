@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 import './Main.css';
 import salsichas from './assets/images/salsichas.png'
-import nos from './assets/images/nos.jpg'
+import nos from './assets/images/nos2.jpg'
 import { useSnackbar } from 'notistack';
 import { forwardRef, useState } from 'react';
 import { Dialog, DialogContent, DialogTitle, Slide } from '@mui/material';
