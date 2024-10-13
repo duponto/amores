@@ -75,6 +75,20 @@ function Main() {
     setLastMessageIndex(randomIndex)
   }
 
+  const getDiasDesdeOPrimeiroBeijo = () => {
+    const primeiroBeijo = new Date('2022-01-01')
+    const hoje = new Date()
+    const diferenca = Math.abs(hoje.getTime() - primeiroBeijo.getTime())
+    return Math.ceil(diferenca / (1000 * 60 * 60 * 24))
+  }
+
+  const getDiasNamorando = () => {
+    const primeiroBeijo = new Date('2022-05-15')
+    const hoje = new Date()
+    const diferenca = Math.abs(hoje.getTime() - primeiroBeijo.getTime())
+    return Math.ceil(diferenca / (1000 * 60 * 60 * 24))
+  }
+
   return (
     <div>
       <label>nós</label>
@@ -90,6 +104,8 @@ function Main() {
           não 😖😭
         </Button>
       </div>
+      <p>Faz {getDiasDesdeOPrimeiroBeijo()} dias desde o primeiro beijo.</p>
+      <p>Namorados há {getDiasNamorando()} dias.</p>
       <Dialog
         open={openDialog}
         TransitionComponent={Transition}
