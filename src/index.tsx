@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Main from './Main';
+import Main from './pages/Main';
 import { SnackbarProvider } from 'notistack';
 
 const root = ReactDOM.createRoot(

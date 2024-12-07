@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
-import './Main.css';
-import salsichas from './assets/images/salsichas.png'
-import nos from './assets/images/nos2.jpg'
+import './index.css';
+import salsichas from '../../assets/images/salsichas.png'
+import nos from '../../assets/images/nos2.jpg'
 import { useSnackbar } from 'notistack';
 import { forwardRef, useState } from 'react';
 import { Dialog, DialogContent, DialogTitle, Slide } from '@mui/material';
@@ -75,17 +75,9 @@ function Main() {
     setLastMessageIndex(randomIndex)
   }
 
-  const getDiasDesdeOPrimeiroBeijo = () => {
-    const primeiroBeijo = new Date('2022-01-01')
+  const getDiasAtras = (data: string) => {
     const hoje = new Date()
-    const diferenca = Math.abs(hoje.getTime() - primeiroBeijo.getTime())
-    return Math.ceil(diferenca / (1000 * 60 * 60 * 24))
-  }
-
-  const getDiasNamorando = () => {
-    const primeiroBeijo = new Date('2022-05-15')
-    const hoje = new Date()
-    const diferenca = Math.abs(hoje.getTime() - primeiroBeijo.getTime())
+    const diferenca = Math.abs(hoje.getTime() - new Date(data).getTime())
     return Math.ceil(diferenca / (1000 * 60 * 60 * 24))
   }
 
@@ -104,8 +96,8 @@ function Main() {
           não 😖😭
         </Button>
       </div>
-      <p>Faz {getDiasDesdeOPrimeiroBeijo()} dias desde o primeiro beijo.</p>
-      <p>Namorados há {getDiasNamorando()} dias.</p>
+      <p>Faz {getDiasAtras('2022')} dias desde o primeiro beijo.</p>
+      <p>Namorados há {getDiasAtras('2022-05-12')} dias.</p>
       <Dialog
         open={openDialog}
         TransitionComponent={Transition}

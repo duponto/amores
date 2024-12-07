@@ -23,5 +23,8 @@
   "include": [
     "src",
     "custom.d.ts"
-  ]
+  ],
+  "paths": {
+    "@": ["src"]
+  }
 }
